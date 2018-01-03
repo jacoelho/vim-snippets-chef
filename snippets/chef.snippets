@@ -195,6 +195,15 @@ snippet pac
 		version '${3:1.0-1}'
 	end
 
+snippet yum
+	yum_repository '${1:name}' do
+	    description '${2:Description for the repository}'
+	    baseurl     '${3:http://dev.zenoss.com/yum/stable/}'
+	    gpgkey      '${4:http://dev.zenoss.com/yum/RPM-GPG-KEY-zenoss}'
+	    gpgcheck    ${5:false}
+	    enabled     ${6:false}
+	end
+
 snippet cookbook_file
 	cookbook_file '${1:/tmp/file}' do
 		owner '${2:root}'
